@@ -21,22 +21,6 @@ export const songTweetSchema = z.object({
 });
 
 export const SongTweet = ({audio, thumbnail, name, artist, streams}) => {
-	console.log(name);
-
-	const waitForFont = delayRender();
-	const font = new FontFace(
-		`Impact`,
-		`url('${staticFile('fonts/impact.ttf')}') format('truetype')`
-	);
-
-	font
-		.load()
-		.then(() => {
-			document.fonts.add(font);
-			continueRender(waitForFont);
-		})
-		.catch((err) => console.log('Error loading font', err));
-
 	return (
 		<AbsoluteFill
 			className="bg-white text-stone-400-600 uppercase"
