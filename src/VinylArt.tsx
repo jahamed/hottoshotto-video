@@ -1,11 +1,14 @@
 import {Img, staticFile, useCurrentFrame} from 'remotion';
 
-export const VinylArt = () => {
+export const VinylArt = ({thumbnail}) => {
 	const vinyl = staticFile('vinyl.webp');
-	const cover1 = staticFile('thumbnail.png');
+	const cover1 = thumbnail;
 
 	const frame = useCurrentFrame();
-	const rotationDegrees = frame;
+
+	// vinyl rotation speed control
+	const rotationDegrees = frame * 10;
+
 	return (
 		<div
 			id="Art"
