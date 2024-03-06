@@ -7,6 +7,8 @@ import {
 	continueRender,
 } from 'remotion';
 
+import {Fragment} from 'react';
+
 import {
 	linearTiming,
 	springTiming,
@@ -22,6 +24,7 @@ import {VinylArt} from './VinylArt';
 import {loadFont} from '@remotion/google-fonts/ConcertOne';
 import {IntroCard} from './IntroCard';
 import {Gif} from '@remotion/gif';
+import {OutroCard} from './OutroCard';
 const {fontFamily} = loadFont();
 
 export const songTweetSchema = z.object({
@@ -39,17 +42,20 @@ export const SongTweet = ({topSongs}) => {
 	return (
 		<>
 			<TransitionSeries>
+				{/* Intro Card */}
 				<TransitionSeries.Sequence durationInFrames={60 * 5}>
-					<IntroCard date="today" />
+					<IntroCard date="today" topSongs={topSongs} />
 				</TransitionSeries.Sequence>
 
+				{/* Intro Card Transition */}
 				<TransitionSeries.Transition
 					presentation={wipe({direction: 'from-top-left'})}
 					timing={linearTiming({durationInFrames: 30})}
 				/>
 
+				{/* Sequence for each song */}
 				{topSongs.map((data, i) => (
-					<>
+					<Fragment key={data.name}>
 						<TransitionSeries.Sequence durationInFrames={300}>
 							{/* starting audio at 20 seconds */}
 							<Audio
@@ -115,8 +121,13 @@ export const SongTweet = ({topSongs}) => {
 							presentation={wipe()}
 							timing={linearTiming({durationInFrames: 30})}
 						/>
-					</>
+					</Fragment>
 				))}
+
+				{/* Outro */}
+				<TransitionSeries.Sequence durationInFrames={60 * 5}>
+					<OutroCard />
+				</TransitionSeries.Sequence>
 			</TransitionSeries>
 		</>
 	);
