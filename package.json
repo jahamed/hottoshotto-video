@@ -4,7 +4,7 @@
 	"description": "My Remotion video",
 	"scripts": {
 		"start": "remotion studio",
-		"build": "remotion render SongTweet out/video.mp4",
+		"build": "remotion render SongTweet out/video2.mp4 ",
 		"upgrade": "remotion upgrade",
 		"test": "eslint src --ext ts,tsx,js,jsx && tsc"
 	},
@@ -12,8 +12,10 @@
 	"license": "UNLICENSED",
 	"dependencies": {
 		"@remotion/cli": "4.0.116",
+		"@remotion/gif": "4.0.118",
 		"@remotion/google-fonts": "^4.0.116",
 		"@remotion/renderer": "4.0.116",
+		"@remotion/transitions": "^4.0.118",
 		"@remotion/zod-types": "4.0.116",
 		"react": "^18.0.0",
 		"react-dom": "^18.0.0",

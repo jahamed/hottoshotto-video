@@ -598,6 +598,13 @@
   dependencies:
     "@typescript-eslint/utils" "5.19.0"
 
+"@remotion/gif@4.0.118":
+  version "4.0.118"
+  resolved "https://registry.yarnpkg.com/@remotion/gif/-/gif-4.0.118.tgz#c3822a9a65cc29d58f166eaf31f0d1234f2cc2f6"
+  integrity sha512-zpaWDu2eDzSC5mjXuIlimP2VG5YJ56v0eN534f+RgmNUt7HXIVi8UETMw5+lT0bVyini0e1E7gZ8uC29J17Sww==
+  dependencies:
+    remotion "4.0.118"
+
 "@remotion/google-fonts@^4.0.116":
   version "4.0.116"
   resolved "https://registry.yarnpkg.com/@remotion/google-fonts/-/google-fonts-4.0.116.tgz#9fcba0d3c31ab7d985be3b79ad4e1d5607a3c693"
@@ -611,6 +618,11 @@
   integrity sha512-w5SLga8oUbiKX5Urg9EuVgsMfRALowqM9JYIisW0aZj0VTZ9AEuQglt45tXtVHCFQj05es8VpzsSPSZnuR5piQ==
   dependencies:
     remotion "4.0.116"
+
+"@remotion/paths@4.0.118":
+  version "4.0.118"
+  resolved "https://registry.yarnpkg.com/@remotion/paths/-/paths-4.0.118.tgz#7f82b341f5716f318b73bef0d837bef9c26c69c8"
+  integrity sha512-6Rxy/ZULJk5GqWICHz9oYsJLc/Ni8XuJ2kMcBGUiq7uPpTw6H3+OHDPnWO7ux5hKL3hZIT8IVQnIyoyZNOkxXA==
 
 "@remotion/player@4.0.116":
   version "4.0.116"
@@ -637,6 +649,13 @@
     "@remotion/compositor-linux-x64-gnu" "4.0.116"
     "@remotion/compositor-linux-x64-musl" "4.0.116"
     "@remotion/compositor-win32-x64-msvc" "4.0.116"
+
+"@remotion/shapes@4.0.118":
+  version "4.0.118"
+  resolved "https://registry.yarnpkg.com/@remotion/shapes/-/shapes-4.0.118.tgz#95bd3b92a6b22133f2a103eb4f4d27371ecbf218"
+  integrity sha512-9/ThR9uS3ysWGDucPIrJ8FKyjnegkpXVLyJDGAHvfX/F5TyjMqiM1gE440Z52KTPSTLGt5non4vlsGwZL9xhGw==
+  dependencies:
+    "@remotion/paths" "4.0.118"
 
 "@remotion/studio-server@4.0.116":
   version "4.0.116"
@@ -686,6 +705,15 @@
     postcss-preset-env "^8.3.2"
     style-loader "2.0.0"
     tailwindcss "^3.3.2"
+
+"@remotion/transitions@^4.0.118":
+  version "4.0.118"
+  resolved "https://registry.yarnpkg.com/@remotion/transitions/-/transitions-4.0.118.tgz#f1c5bf3f0a3b0fe9447996e5971f8188019857ff"
+  integrity sha512-i5ySvijuJM/A1alQqXwLNVmXdoZ6HhYgYCqHdvjOotphuamWwYny9itjROMRcT0bWI/sue1JGjXDtye6M9ZC5w==
+  dependencies:
+    "@remotion/paths" "4.0.118"
+    "@remotion/shapes" "4.0.118"
+    remotion "4.0.118"
 
 "@remotion/zod-types@4.0.116":
   version "4.0.116"
@@ -3277,6 +3305,11 @@ remotion@4.0.116:
   version "4.0.116"
   resolved "https://registry.yarnpkg.com/remotion/-/remotion-4.0.116.tgz#bdca60876c5b61004e59c532af7a4f487e008417"
   integrity sha512-xPAjUN3eKbAsmYVtPERN44v4Bh9zG8WXGkYpwQnm21SHvzEPSJvGYRIcoEzzSLHNFC0ttuDGHHwUl5v2bSZT+w==
+
+remotion@4.0.118:
+  version "4.0.118"
+  resolved "https://registry.yarnpkg.com/remotion/-/remotion-4.0.118.tgz#e1ce1e603f1631db055d5ae7d1fe5b954b6f440b"
+  integrity sha512-NB07EzgdW2h+9Ec7/dKqZ4+4O3pAdX9hhFIQv73ALr1evo+RJ+nClBnCp1SrR8+QbH2e+HUKpz1JxSQ+5JJBpQ==
 
 resolve-from@^4.0.0:
   version "4.0.0"

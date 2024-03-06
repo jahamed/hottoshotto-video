@@ -1,3 +1,4 @@
+import {Gif} from '@remotion/gif';
 import {Img, staticFile, useCurrentFrame} from 'remotion';
 
 export const VinylArt = ({thumbnail}) => {
@@ -8,6 +9,9 @@ export const VinylArt = ({thumbnail}) => {
 
 	// vinyl rotation speed control
 	const rotationDegrees = frame * 10;
+
+	// Check if the URL ends with ".gif"
+	const isGif = thumbnail.endsWith('.gif');
 
 	return (
 		<div
@@ -30,30 +34,62 @@ export const VinylArt = ({thumbnail}) => {
 				}}
 				src={vinyl}
 			/>
-			<Img
-				id="vinylArt"
-				src={cover1}
-				style={{
-					width: 80,
-					position: 'absolute',
-					top: 110,
-					left: 285,
-					borderRadius: 500,
-					transform: `rotateZ(${rotationDegrees}deg)`,
-				}}
-			/>
-			<Img
-				id="coverArt"
-				src={cover1}
-				style={{
-					backgroundSize: 'cover',
-					width: 300,
-					height: 300,
-					position: 'absolute',
-					borderRadius: 10,
-					filter: 'drop-shadow(5px 0px 0.5rem rgba(0,0,0,0.5))',
-				}}
-			/>
+
+			{isGif ? (
+				<>
+					<Gif
+						id="vinylArt"
+						src={cover1}
+						style={{
+							width: 80,
+							position: 'absolute',
+							top: 110,
+							left: 285,
+							borderRadius: 500,
+							transform: `rotateZ(${rotationDegrees}deg)`,
+						}}
+					/>
+					<Gif
+						id="coverArt"
+						src={cover1}
+						style={{
+							backgroundSize: 'cover',
+							width: 300,
+							height: 300,
+							position: 'absolute',
+							borderRadius: 10,
+							filter: 'drop-shadow(5px 0px 0.5rem rgba(0,0,0,0.5))',
+						}}
+					/>
+				</>
+			) : (
+				<>
+					<Img
+						id="vinylArt"
+						src={cover1}
+						style={{
+							width: 80,
+							position: 'absolute',
+							top: 110,
+							left: 285,
+							borderRadius: 500,
+							transform: `rotateZ(${rotationDegrees}deg)`,
+						}}
+					/>
+					<Img
+						id="coverArt"
+						src={cover1}
+						style={{
+							backgroundSize: 'cover',
+							width: 300,
+							height: 300,
+							position: 'absolute',
+							borderRadius: 10,
+							filter: 'drop-shadow(5px 0px 0.5rem rgba(0,0,0,0.5))',
+						}}
+					/>
+				</>
+			)}
 		</div>
 	);
 };
